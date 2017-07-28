@@ -1,14 +1,15 @@
 '''
-mkdir am_examples && cd am_examples
+mkdir examples && cd examples
 
 git clone https://github.com/google/googletest.git
 cd googletest
-mkdir build
-cd build
+mkdir build && cd build
 cmake ..
-cd ..
+make -j4
+cd ../..
 
 git clone https://github.com/skarlsson/am_examples.git
+
 '''
 
 
