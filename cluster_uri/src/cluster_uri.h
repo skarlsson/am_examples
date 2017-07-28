@@ -13,7 +13,7 @@
  */
 class cluster_uri {
 public:
-  explicit cluster_uri(const std::string s);
+  explicit cluster_uri(std::string s);
   bool good() const { return good_; }
   std::string scheme() const  { return scheme_; }
   std::string authority() const {  return authority_; }
