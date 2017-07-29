@@ -2,6 +2,14 @@
 #include <gtest/gtest.h>
 #include "stack.h"
 
+
+TEST(STACK, str) {
+  stack<std::string> s({"the", "yogurt", "is", "cursed"});
+  EXPECT_EQ(s.size(), (size_t) 4);
+  EXPECT_EQ(s.str(), "[the, yogurt, is, cursed]");
+}
+
+
 TEST(STACK, size) {
   stack<int> s(2, 200);
   EXPECT_EQ(s.size(),  (size_t) 2);
@@ -49,7 +57,7 @@ TEST(STACK, clear) {
 }
 
 
-TEST(STACK, valuew) {
+TEST(STACK, reverse_string) {
   stack<std::string> s({"the", "yogurt", "is", "cursed"});
   EXPECT_EQ(s.size(), (size_t) 4);
   s.reverse();
